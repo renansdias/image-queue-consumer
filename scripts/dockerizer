@@ -1,0 +1,12 @@
+#!/bin/bash
+
+set -xe
+
+server_prefix="localhost:5000/"
+
+if [ $# -ne 1 ]; then
+	echo "Provide a docker image name before proceeding."
+	exit 1;
+fi
+
+docker run -d -P $server_prefix$1 node /proj/index.js
