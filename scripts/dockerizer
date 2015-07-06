@@ -10,3 +10,4 @@ if [ $# -ne 1 ]; then
 fi
 
 sudo docker run -d -p 7777:7777 $server_prefix$1 node /proj/calculator/index.js
+aws s3 cp /registry s3://finep2 --recursive
