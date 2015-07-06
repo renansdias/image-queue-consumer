@@ -9,4 +9,4 @@ if [ $# -ne 1 ]; then
 	exit 1;
 fi
 
-docker run -d -P $server_prefix$1 node /proj/index.js
+sudo docker run -d -p 7777:7777 $server_prefix$1 node /proj/calculator/index.js
